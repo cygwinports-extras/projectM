@@ -1,0 +1,10 @@
+--- origsrc/libprojectM-1.2.0/CMakeLists.txt	2008-06-11 22:39:28.000000000 -0500
++++ src/libprojectM-1.2.0/CMakeLists.txt	2009-07-12 04:36:45.138807200 -0500
+@@ -134,4 +134,6 @@ INSTALL(FILES ${fonts} DESTINATION ${CMA
+ INSTALL(FILES "${CMAKE_CURRENT_SOURCE_DIR}/libprojectM.pc" DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}/pkgconfig)
+ INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/config.inp DESTINATION ${CMAKE_INSTALL_PREFIX}/share/projectM)
+ INSTALL(FILES projectM.hpp event.h dlldefs.h fatal.h PresetFrameIO.hpp PCM.hpp  DESTINATION include/libprojectM)
+-INSTALL(TARGETS projectM DESTINATION lib${LIB_SUFFIX})
++INSTALL(TARGETS projectM LIBRARY DESTINATION lib${LIB_SUFFIX}
++                         RUNTIME DESTINATION bin
++                         ARCHIVE DESTINATION lib${LIB_SUFFIX})

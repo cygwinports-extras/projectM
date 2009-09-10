@@ -1,0 +1,11 @@
+--- origsrc/libprojectM-1.2.0/Renderer.hpp	2008-06-11 22:39:28.000000000 -0500
++++ src/libprojectM-1.2.0/Renderer.hpp	2009-07-12 04:37:44.517214500 -0500
+@@ -24,7 +24,7 @@
+ #include <FTGLPixmapFont.h>
+ #include <FTGLExtrdFont.h>
+ #else
+-#include <FTGL/FTGL.h>
++#include <FTGL/ftgl.h>
+ #include <FTGL/FTGLPixmapFont.h>
+ #include <FTGL/FTGLExtrdFont.h>
+ #endif

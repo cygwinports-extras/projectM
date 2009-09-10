@@ -1,0 +1,16 @@
+inherit cmake
+
+DESCRIPTION="Milkdrop-compatible music visualization library"
+HOMEPAGE="http://projectm.sourceforge.net/"
+SRC_URI="mirror://sourceforge/projectm/${P}.tar.bz2"
+
+PATCH_URI="1.2.0-cmake.patch
+           1.2.0-ftgl2.patch
+           1.2.0-isnan.patch"
+
+PKG_NAMES="${PN} ${PN}2 ${PN}-common ${PN}-devel"
+libprojectM2_CONTENTS="usr/bin/*-2.dll"
+libprojectM_common_CONTENTS="usr/share/"
+libprojectM_devel_CONTENTS="usr/include/ usr/lib/"
+
+DIFF_EXCLUDES="config.inp *.pc"
