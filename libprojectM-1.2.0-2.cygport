@@ -14,3 +14,6 @@ libprojectM_common_CONTENTS="usr/share/"
 libprojectM_devel_CONTENTS="usr/include/ usr/lib/"
 
 DIFF_EXCLUDES="config.inp *.pc"
+
+# http://sourceforge.net/projects/projectm/forums/forum/358774/topic/2022415
+CYGCMAKE_ARGS="-DUSE_FBO=OFF"
