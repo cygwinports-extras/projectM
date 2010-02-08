@@ -5,18 +5,19 @@ Linux, Mac OSX, and Windows. It is backward compatible with all the
 features of Milkdrop 1.x, but has many new toys and enhancements.
 
 Runtime requirements:
-  cygwin-1.7.0-50
-  libgcc1-4.3.2-2
-  libGL1-7.4.4-1
-  libstdc++6-4.3.2-2
+  cygwin-1.7.1-1
+  libftgl2-2.1.3_rc5-1
+  libgcc1-4.3.4-3
+  libGL1-7.5.2-1
+  libstdc++6-4.3.4-3
 
 Build requirements:
 (besides corresponding -devel packages)
   binutils-2.19.51-1
-  cmake-2.6.4-10
-  cygport-0.9.7-1
-  gcc4-core-4.3.2-2
-  gcc4-g++-4.3.2-2
+  cmake-2.8.0-11
+  cygport-0.9.80-1
+  gcc4-core-4.3.4-3
+  gcc4-g++-4.3.4-3
   make-3.81-2
 
 Canonical website:
@@ -28,21 +29,24 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libprojectM-1.2.0-X-src.tar.bz2
+  unpack libprojectM-2.0.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libprojectM-1.2.0-X.cygport all
+  cygport ./libprojectM-2.0.1-X.cygport all
 
 This will create:
-  /usr/src/libprojectM-1.2.0-X-src.tar.bz2
-  /usr/src/libprojectM-common-1.2.0-X.tar.bz2
-  /usr/src/libprojectM-devel-1.2.0-X.tar.bz2
-  /usr/src/libprojectM2-1.2.0-X.tar.bz2
+  /usr/src/libprojectM-2.0.1-X-src.tar.bz2
+  /usr/src/libprojectM-common-2.0.1-X.tar.bz2
+  /usr/src/libprojectM-devel-2.0.1-X.tar.bz2
+  /usr/src/libprojectM2-2.0.1-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 2.0.1-1 -----
+Major version bump.
 
 ----- version 1.2.0-2 -----
 Disable an unavailable feature, hopefully preventing some crashes.

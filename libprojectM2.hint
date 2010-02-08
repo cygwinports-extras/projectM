@@ -1,5 +1,5 @@
 category: Audio
-requires: libgcc1 libGL1 libstdc++6 libprojectM-common
+requires: libftgl2 libgcc1 libGL1 libstdc++6 libprojectM-common
 external-source: libprojectM
 sdesc: "Milkdrop-compatible music visualization library (runtime)"
 ldesc: "projectM is an OpenGL based advanced music visualization program 
