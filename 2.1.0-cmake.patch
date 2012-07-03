@@ -1,0 +1,22 @@
+--- origsrc/projectM-complete-2.1.0-Source/src/libprojectM/CMakeLists.txt	2012-05-19 22:43:26.000000000 -0500
++++ src/projectM-complete-2.1.0-Source/src/libprojectM/CMakeLists.txt	2012-07-02 23:19:54.322673600 -0500
+@@ -237,4 +237,6 @@ INSTALL(FILES ${Renderer_SOURCE_DIR}/pro
+ INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/libprojectM.pc DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/pkgconfig)
+ INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/config.inp DESTINATION ${CMAKE_INSTALL_PREFIX}/share/projectM)
+ INSTALL(FILES projectM.hpp event.h dlldefs.h fatal.h PCM.hpp Common.hpp DESTINATION include/libprojectM)
+-INSTALL(TARGETS projectM DESTINATION lib)
++INSTALL(TARGETS projectM LIBRARY DESTINATION lib
++                         RUNTIME DESTINATION bin
++                         ARCHIVE DESTINATION lib)
+--- origsrc/projectM-complete-2.1.0-Source/src/projectM-qt/CMakeLists.txt	2012-05-19 22:43:25.000000000 -0500
++++ src/projectM-complete-2.1.0-Source/src/projectM-qt/CMakeLists.txt	2012-07-02 23:22:38.737790500 -0500
+@@ -131,6 +131,8 @@ include_directories(${PROJECTM_INCLUDE}
+ target_link_libraries(projectM-qt projectM GLEW GL ${QT_QTGUI_LIBRARIES} ${QT_QTOPENGL_LIBRARIES} ${QT_QTXML_LIBRARIES} ${QT_LIBRARIES})
+ 
+ install(FILES qprojectm_mainwindow.hpp DESTINATION include/libprojectM-qt)
+-install(TARGETS projectM-qt DESTINATION lib)
+ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libprojectM-qt.pc" DESTINATION lib/pkgconfig)
+ install(FILES "images/icons/prjm16-transparent.svg" DESTINATION	${CMAKE_INSTALL_PREFIX}/share/pixmaps)
++install(TARGETS projectM-qt LIBRARY DESTINATION lib
++                            RUNTIME DESTINATION bin
++                            ARCHIVE DESTINATION lib)

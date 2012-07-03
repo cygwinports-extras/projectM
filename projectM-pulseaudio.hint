@@ -1,7 +1,7 @@
 category: Audio
-requires: libprojectM2
+requires: libgcc1 libprojectM-qt1 libpulse0 libQtCore4 libQtGui4 libstdc++6
 external-source: projectM
-sdesc: "Milkdrop-compatible music visualization library (development)"
+sdesc: "Milkdrop-compatible music visualization client for PulseAudio"
 ldesc: "projectM is an OpenGL based advanced music visualization program 
 for Linux, Mac OSX, and Windows. It is backward compatible with all the 
 features of Milkdrop 1.x, but has many new toys and enhancements."

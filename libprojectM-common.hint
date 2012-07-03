@@ -1,5 +1,6 @@
 category: Audio
-external-source: libprojectM
+requires:
+external-source: projectM
 sdesc: "Milkdrop-compatible music visualization library (data)"
 ldesc: "projectM is an OpenGL based advanced music visualization program 
 for Linux, Mac OSX, and Windows. It is backward compatible with all the 

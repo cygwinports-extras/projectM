@@ -1,0 +1,36 @@
+inherit cmake
+
+DESCRIPTION="Milkdrop-compatible music visualization library"
+HOMEPAGE="http://projectm.sourceforge.net/"
+SRC_URI="mirror://sourceforge/projectm/${PN}-complete-${PV}-Source.tar.gz"
+SRC_DIR="${PN}-complete-${PV}-Source"
+
+PATCH_URI="2.1.0-cmake.patch
+           2.1.0-isnan.patch"
+
+PKG_NAMES="libprojectM2 libprojectM-common libprojectM-devel
+           libprojectM-qt1 libprojectM-qt-devel projectM-pulseaudio"
+libprojectM2_CONTENTS="usr/bin/cygprojectM-2.dll"
+libprojectM_common_CONTENTS="usr/share/doc/ usr/share/projectM/"
+libprojectM_devel_CONTENTS="usr/include/libprojectM/ usr/lib/libprojectM.*
+                            usr/lib/pkgconfig/libprojectM.pc"
+libprojectM_qt1_CONTENTS="usr/bin/cygprojectM-qt-1.dll"
+libprojectM_qt_devel_CONTENTS="usr/include/libprojectM-qt/ usr/lib/libprojectM-qt.*
+                               usr/lib/pkgconfig/libprojectM-qt.pc"
+projectM_pulseaudio_CONTENTS="usr/bin/projectM-pulseaudio.exe
+                              usr/share/applications/ usr/share/pixmaps/"
+
+DIFF_EXCLUDES="config.inp *.pc"
+
+# FBO: http://sf.net/projects/projectm/forums/forum/358774/topic/2022415
+CYGCMAKE_ARGS="
+	-DINCLUDE-NATIVE-PRESETS=OFF
+	-DINCLUDE-PROJECTM-JACK=OFF
+	-DINCLUDE-PROJECTM-LIBVISUAL=OFF
+	-DINCLUDE-PROJECTM-LIBVISUAL-ALSA=OFF
+	-DINCLUDE-PROJECTM-PULSEAUDIO=ON
+	-DINCLUDE-PROJECTM-QT=ON
+	-DINCLUDE-PROJECTM-TEST=OFF
+	-DINCLUDE-PROJECTM-XMMS=OFF
+	-DUSE_FBO=OFF
+"

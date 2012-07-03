@@ -1,5 +1,7 @@
 category: Audio
-sdesc: "Milkdrop-compatible music visualization library (sources)"
+requires: libprojectM-qt1 libprojectM-devel libQtCore4-devel libQtGui4-devel libQtOpenGL4-devel
+external-source: projectM
+sdesc: "Milkdrop-compatible music visualization library (Qt4 development)"
 ldesc: "projectM is an OpenGL based advanced music visualization program 
 for Linux, Mac OSX, and Windows. It is backward compatible with all the 
 features of Milkdrop 1.x, but has many new toys and enhancements."
